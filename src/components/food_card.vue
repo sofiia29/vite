@@ -3,11 +3,11 @@
            <div class="space_betw">
                <div class="sale" v-if="product.is_sale">Sale</div>
                <div class="mark">
-                   <img src="./../assets/images/Star 1.svg">
+                   <img src="./../assets/images/Star 1.svg" >
                    <p>{{product.rating}}</p>
                </div>
            </div>
-            <img :src="product.img">
+            <img :src="product.img" class="food_image">
            <div class="txt">
                <p>{{product.category}}</p>
                <h5>{{product.name}}</h5>
@@ -17,7 +17,7 @@
                </div>
            </div>
            <Orange_btn value="Add to cart" color="orange" id="btn"/>
-    </div> 
+    </div>
 </template>
 
 <script>
@@ -27,8 +27,8 @@ export default {
     props: {
         product: Object,
     },
-    components: { 
-        Orange_btn, 
+    components: {
+        Orange_btn,
     }
 }
 </script>
@@ -46,6 +46,10 @@ export default {
         justify-content: space-between;
     }
 
+    .food_image{
+      width: 100%;
+    }
+
     .sale{
         background-color:#8BD32E;
         color: white;
@@ -59,6 +63,7 @@ export default {
         border-radius: 37px;
         color: #B6B6B6;
         font-size: 14px;
+        display: flex;
     }
     .mark p{
         margin: 0;

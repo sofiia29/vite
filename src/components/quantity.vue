@@ -1,8 +1,9 @@
 <template>
-    <div>
+    <div class="counter">
         <div class="minus" @click="minus()">-</div>
-        <p>{{clicks}}</p>
+        <p>{{clicks}} kg</p>
         <div class="plus" @click="plus()">+</div>
+        <input type="text" v-model="clicks">
     </div>
 </template>
 
@@ -29,6 +30,9 @@ export default {
 </script>
 
 <style scoped>
+    .counter{
+      display: flex;
+    }
     .minus, .plus{
         width: 28px;
         height: 32px;
