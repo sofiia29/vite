@@ -8,7 +8,7 @@
         <p>Hi! Welcome at GoodLife website! We are fruit and vegetables delivery service.
           Our goal is to make people healthier by providing them an opportunity to eat fresh and healthy food every
           day!</p>
-        <OrangeBtn color="orange"></OrangeBtn>
+        <OrangeBtn color="orange" value="Order now"></OrangeBtn>
       </div>
       <img src="./../assets/images/image 58.png" id="img">
     </div>
@@ -32,6 +32,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
 }
 
 #pos1 {
@@ -43,8 +44,7 @@ export default {
 
 #pos2 {
   position: absolute;
-
-  left: -34px;
+    left: -34px;
   top: -16px;
   z-index: -1;
 }
@@ -54,6 +54,12 @@ h3 {
   font-size: 64px;
   line-height: 80px;
   margin: 0;
+}
+
+p{
+    line-height: 28px;
+    font-weight: 400;
+    font-size: 18px;
 }
 
 #green {
@@ -69,8 +75,9 @@ h3 {
 }
 
 #img {
-  width: 922px;
-  height: 859px;
+  width: 650px;
   margin-right: -111px;
+  margin-top: 100px;
+  object-fit: contain;
 }
 </style>

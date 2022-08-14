@@ -1,10 +1,9 @@
 <template>
   <div>
-    <button
-        :class='[{"icon-left":isLeft, "icon-right":isRight, "orange":type==="filled", "border":type==="outlined"}, color]'>
+    <button :class='[{"icon-left":isLeft, "icon-right":isRight, "orange":type==="filled", "border":type==="outlined"}, color]'>
       <div v-if="isLeft" class="img"></div>
-      Text
-      <div v-if="isRight"></div>
+      {{value}}
+      <div v-if="isRight" class="img"></div>
     </button>
   </div>
 </template>
@@ -24,6 +23,7 @@ export default {
     },
     color: String,
     type: String,
+    value: String,
   },
 
 }
@@ -45,9 +45,9 @@ button {
 }
 
 .img {
-  -webkit-mask-image: url(./../assets/images/vector.svg);
+  -webkit-mask-image: url(./../assets/images/Up.svg);
   -webkit-mask-repeat: no-repeat;
-  background: black;
+  background: #FDA624;
   height: 24px;
   width: 24px;
 }
